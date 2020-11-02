@@ -3,16 +3,15 @@
 
 if __name__ == '__main__':
 
-    numbers_split = input().split()
-    result = []
+    result_of_non_negative_integers = []
+    list_of_numbers = input().split()
 
-    for numbers in numbers_split:
-        numbers = int(numbers)
-        if numbers >= 0:
-            result.append(numbers)
+    for user_numbers in list_of_numbers:
+        user_numbers = int(user_numbers)
+        if user_numbers >= 0:
+            result_of_non_negative_integers.append(user_numbers)
 
-    result.sort()
-    for numbers in result:
-        print(numbers, end=' ')
+    result_of_non_negative_integers.sort()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    for user_numbers in result_of_non_negative_integers:
+        print(user_numbers, end=' ')
