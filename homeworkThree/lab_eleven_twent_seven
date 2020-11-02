@@ -1,0 +1,103 @@
+# Joseph Morris
+# 1840300
+
+def addPlayer():
+    print("Enter a new player's jersey number:")
+    jersey_number = int(input())
+
+    while jersey_number < 0 or jersey_number > 99:
+        print("Invalid Jersey Number! Please " + "enter again")
+        print("Enter a new player's jersey number:")
+        jersey_number = int(input())
+
+    print("Enter the player's rating:")
+    player_rating = int(input())
+
+    while player_rating < 1 or player_rating > 9:
+        print("Invalid Rating! Please enter again!")
+        print("Enter the player's rating:")
+        player_rating = int(input())
+
+def removePlayer():
+    print("Enter a jersey number:")
+    jersey_number = int(input())
+
+    while jersey_number < 0 or jersey_number > 99:
+        print("Invalid Jersey Number! Please enter again")
+        print("Enter a jersey number:")
+        jersey_number = int(input())
+
+    if jersey_number in dictionary_for_players.keys():
+        del dictionary_for_players[jersey_number]
+
+
+def updatingPlayer():
+    print("Enter a jersey number:")
+    jersey_number = int(input())
+    while jersey_number < 0 or jersey_number > 99:
+        print("Invalid Jersey Number! Please enter again!")
+        print("Enter a jersey number:")
+        jersey_number = int(input())
+
+    print("Enter a new rating for a player:")
+    player_rating = int(input())
+    while player_rating < 1 or player_rating > 9:
+        print("Invalid Rating! Please enter again!")
+        print("Enter a new rating for a player:")
+        player_rating = int(input())
+
+    dictionary_for_players[jersey_number] = player_rating
+
+
+
+if __name__ == '__main__':
+
+    sorted_list = []
+    dictionary_for_players = {}
+
+    for user_number in range(1, 6):
+        print("Enter player " + str(user_number) + "'s jersey number:")
+        jersey_number = int(input())
+
+        while jersey_number < 0 or jersey_number > 99:
+            print("Invalid Jersey Number! Please " + "enter again!")
+            print("Enter player " + str(user_number) + " 's jersey number:")
+            jersey_number = int(input())
+
+        print("Enter player " + str(user_number) + "'s rating:")
+        player_rating = int(input())
+
+        while player_rating < 0 or player_rating > 99:
+            print("Invalid Jersey Number! Please " + "enter again!")
+            print("Enter player " + str(user_number) + " 's jersey number:")
+            player_rating = int(input())
+
+        print()
+
+
+    while(True):
+        print("MENU")
+        print("a - Add player")
+        print("d - Remove player")
+        print("u - Update player rating")
+        print("r - Output player above a rating")
+        print("o - Output roster")
+        print("q - Quit")
+        print()
+
+        print("Choose an option:")
+        users_input = input()
+        if users_input == 'a':
+            addPlayer()
+        elif users_input == 'd':
+            removePlayer()
+        elif users_input == 'u':
+            updatingPlayer()
+        elif users_input == 'r':
+            outputPlayerRating()
+        elif users_input == 'o':
+            thePlayerRoster()
+        elif users_input == 'q':
+            break
+
+        print()
