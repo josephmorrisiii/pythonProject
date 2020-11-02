@@ -2,7 +2,7 @@
 #1840300
 
 class Team:
-    def __init__(self):
+    def __init__(self, team_name = 'none', team_wins = 0, team_losses = 0):
         self.team_name = 'none'
         self.team_wins = 0
         self.team_losses = 0
