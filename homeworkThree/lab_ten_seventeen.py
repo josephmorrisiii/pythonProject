@@ -21,8 +21,8 @@ if __name__ == "__main__":
     item_one.item_name = input('Enter the item name:\n')
     item_one.item_price = int(input('Enter the item price:\n'))
     item_one.item_quantity = int(input('Enter the item quantity:\n'))
-
-    print("\nItem 2")
+    print()
+    print("Item 2")
     item_two.item_name = input('Enter the item name:\n')
     item_two.item_price = int(input('Enter the item price:\n'))
     item_two.item_quantity = int(input('Enter the item quantity:\n'))
